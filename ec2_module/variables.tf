@@ -62,8 +62,8 @@ variable "key_name" {
 }
 
 variable "security_group_names" {
-  type = string
-  default = [default]
+  type = list(string)
+  default = ["default"]
 }
 
 variable "password" {
