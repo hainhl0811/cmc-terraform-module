@@ -41,7 +41,22 @@ go.mod
 go mod tidy
 go build
 ```
-
+**add terraformrc**
+```linux
+provider_installation {
+ dev_overrides {
+ "cmc-cloud/cmccloudv2" = "/usr/src/terraform/terraform-providercmccloudv2"
+ }
+ filesystem_mirror {
+ path = "/usr/src/terraform/terraform-provider-cmccloudv2"
+ include = ["github.com/cmc-cloud/*"]
+ }
+ direct {
+ exclude = ["github.com/cmc-cloud/*"]
+ include = ["hashicorp/aws"]
+ }
+}
+```
 ```terraform
 module "provision_ecs" {
   source = "github.com/hainhl0811/cmc-terraform-module/ecs"
