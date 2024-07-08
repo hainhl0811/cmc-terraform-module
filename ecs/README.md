@@ -28,8 +28,15 @@ git clone https://github.com/cmc-cloud/terraform-provider-cmccloudv2.git
 cd terraform-provider-cmccloudv2/
 vi /usr/src/terraform/terraform-provider-cmccloudv2/go.mod
 ```
+**build provider**
+```linux
+go mod tidy
+go build
+```
 >replace github.com/cmc-cloud/gocmcapiv2 => /usr/src/terraform/gocmcapiv2
->#vi /root/.terraformrc
+
+>  #vi /root/.terraformrc
+
 ```linux
 provider_installation {
  dev_overrides {
