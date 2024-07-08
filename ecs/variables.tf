@@ -3,6 +3,10 @@ variable "api_endpoint" {
   default = "https://apiv2.cloud.cmctelecom.vn"
 }
 
+variable "ecs_state" {
+  type = string
+  default = "active"
+}
 variable "api_key" {
   type = string
 }
