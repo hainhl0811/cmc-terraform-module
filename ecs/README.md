@@ -29,10 +29,8 @@ cd terraform-provider-cmccloudv2/
 vi /usr/src/terraform/terraform-provider-cmccloudv2/go.mod
 ```
 >replace github.com/cmc-cloud/gocmcapiv2 => /usr/src/terraform/gocmcapiv2
-
+>#vi /root/.terraformrc
 ```linux
-#vi /root/.terraformrc
- 
 provider_installation {
  dev_overrides {
  "cmc-cloud/cmccloudv2" = "/usr/src/terraform/terraform-providercmccloudv2"
