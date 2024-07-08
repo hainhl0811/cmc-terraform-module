@@ -23,6 +23,8 @@ snap install go --classic
 sudo mkdir -p /usr/src/terraform/
 cd /usr/src/terraform/ #Path to work with cmccloud terraform
 wget https://go.dev/dl/go1.22.3.linux-amd64.tar.gz
+tar -xvzf go1.22.3.linux-amd64.tar.gz
+mv go1.22.3.linux-amd64 /usr/local/
 ```
 ```linux
 cd /usr/src/terraform/
