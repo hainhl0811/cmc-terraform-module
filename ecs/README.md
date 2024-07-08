@@ -15,11 +15,6 @@ sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update
 sudo apt-get install terraform
 ```
-```linux
-sudo mkdir -p /usr/src/terraform/
-cd /usr/src/terraform/ #Path to work with cmccloud terraform
-wget https://go.dev/dl/go1.22.3.linux-amd64.tar.gz
-```
 **1.Installation**
 ```linux
 sudo mkdir -p /usr/src/terraform/
