@@ -67,6 +67,7 @@ module "provision_ecs" {
   subnet_name = ""
   ecs_zone = ""
   ecs_name = ""
+  ecs_ip_address = ""
   ev_size = "50"
   ecs_key_name = "keypair-rke"
   sg_names = ["default"]
