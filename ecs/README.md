@@ -74,6 +74,11 @@ module "provision_rke_node" {
   ecs_password = "asdqwdqwdqwdqwd"
 }
 ```
+```terraform
+terraform init
+terraform plan
+terraform apply
+```
 >###default flavor is 1 cpu 1 ram  
 >flavor_cpu = ""  
 >flavor_ram = ""
