@@ -6,66 +6,59 @@ variable "subnet_name" {
   type = string
 }
 
-variable "cpu" {
+variable "flavor_cpu" {
   type = number
   default = "1"
 }
 
-variable "ram" {
+variable "flavor_ram" {
   type = number
   default = "1"
 }
 
-variable "ip_address" {
+variable "ecs_ip_address" {
   type = string
 }
 
-variable "flavor_id" {
-  type = string
-}
-
-variable "source_id" {
-  type = string
-}
-
-variable "billing_mode" {
+variable "ecs_billing_mode" {
   type = string
   default = "monthly"
 }
 
-variable "zone" {
+variable "ecs_zone" {
   type = string
 }
 
-variable "name" {
+variable "ecs_name" {
   type = string
 }
 
-variable "source_type" {
+variable "ecs_source_type" {
   type = string
   default = "image"
 }
 
-variable "volume_size" {
+variable "ev_size" {
   type = number
   default = "50"
 }
 
-variable "volume_type" {
+variable "ev_type" {
   type = string
   default = "highio"
 }
 
-variable "key_name" {
+variable "ecs_key_name" {
   type = string
   default = "keypair-rke"
 }
 
-variable "security_group_names" {
+variable "sg_names" {
   type = list(string)
   default = ["default"]
 }
 
-variable "password" {
+variable "ecs_password" {
   type = string
 }
+
