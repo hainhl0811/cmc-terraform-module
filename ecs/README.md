@@ -58,8 +58,7 @@ provider_installation {
 **2.Module example**
 ```terraform
 module "provision_rke_node" {
-&ensp;source = "./modules"
-  &ensp;source = "./modules"
+  source = "github.com/hainhl0811/cmc-terraform-module/ecs"
   api_key = ""
   project_id = ""
   region_id = ""
