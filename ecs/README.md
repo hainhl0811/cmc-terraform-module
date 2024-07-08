@@ -45,7 +45,7 @@ go build
 ```linux
 provider_installation {
  dev_overrides {
- "cmc-cloud/cmccloudv2" = "/usr/src/terraform/terraform-providercmccloudv2"
+ "cmc-cloud/cmccloudv2" = "/usr/src/terraform/terraform-provider-cmccloudv2"
  }
  filesystem_mirror {
  path = "/usr/src/terraform/terraform-provider-cmccloudv2"
