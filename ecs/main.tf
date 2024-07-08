@@ -47,5 +47,5 @@ resource "cmccloudv2_server" "terraform_provision_node" {
     security_group_names = var.sg_names
     key_name = var.ecs_key_name
     password = var.ecs_password
-    vm_state = "active"
+    vm_state = var.ecs_state
 }
