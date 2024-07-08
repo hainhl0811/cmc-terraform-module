@@ -27,39 +27,7 @@ tar -xvzf go1.22.3.linux-amd64.tar.gz
 mv go1.22.3.linux-amd64 /usr/local/
 ```
 ```linux
-cd /usr/src/terraform/
-git clone https://github.com/cmc-cloud/gocmcapiv2.git
-git clone https://github.com/cmc-cloud/terraform-provider-cmccloudv2.git
-cd terraform-provider-cmccloudv2/
-vi /usr/src/terraform/terraform-provider-cmccloudv2/go.mod
-```
-**build provider**
-```linux
-go mod tidy
-go build
-```
->replace github.com/cmc-cloud/gocmcapiv2 => /usr/src/terraform/gocmcapiv2
-
->  #vi /root/.terraformrc
-
-```linux
-provider_installation {
- dev_overrides {
- "cmc-cloud/cmccloudv2" = "/usr/src/terraform/terraform-providercmccloudv2"
- }
- filesystem_mirror {
- path = "/usr/src/terraform/terraform-provider-cmccloudv2"
- include = ["github.com/cmc-cloud/*"]
- }
- direct {
- exclude = ["github.com/cmc-cloud/*"]
- include = ["hashicorp/aws"]
- }
-}
-```
-**2.Module example**
-```terraform
-module "provision_rke_node" {
+cd /usr/src/terraecs" {
   source = "github.com/hainhl0811/cmc-terraform-module/ecs"
   api_key = ""
   project_id = ""
