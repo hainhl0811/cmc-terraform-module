@@ -1,6 +1,5 @@
 **Prerequisites**
 1. Terraform
-2. Golang
 ```linux
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 wget -O- https://apt.releases.hashicorp.com/gpg | \
@@ -14,6 +13,10 @@ https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update
 sudo apt-get install terraform
+```
+2. Golang
+```linux
+snap install go --classic
 ```
 **1.Installation**
 ```linux
