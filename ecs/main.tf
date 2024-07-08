@@ -48,18 +48,4 @@ resource "cmccloudv2_server" "terraform_provision_node" {
     key_name = var.ecs_key_name
     password = var.ecs_password
     vm_state = "active"
-
-    connection {
-    type     = "ssh"
-    user     = "root"
-    password = var.ecs_password
-    host     = var.ecs_ip_address
-    }
-
-    provisioner "remote-exec"{
-    inline = [
-    "sudo apt update -y",
-    "sudo apt install docker docker.io -y"]
-    #on_failure = continue
-    }
 }
